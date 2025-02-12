@@ -1,7 +1,7 @@
 from database import create_db, insert_planet
 from fetch_data import fetch_and_store_ephemerides
 from queries import get_planet_data, get_latest_ephemerides, get_all_ephemerides, get_ephemerides_by_date
-#from visualization import display_ephemerides, plot_ephemerides
+from visualization import display_ephemerides, plot_ephemerides
 
 
 
@@ -25,15 +25,15 @@ def main():
     print("\n📅 Get Ephemeride from '2025-Jun-02'up to '2025-Jun-03':")
     print(get_ephemerides_by_date('2025-Jun-02','2025-Jun-03'))
 
-    #print("\n📊 Displaying Ephemerides Data...")
-    #df = display_ephemerides()
+    print("\n📊 Displaying Ephemerides Data...")
+    df = display_ephemerides()
 
-    #if not df.empty:
-    #    print("\n📈 Generating Plots...")
-    #    plot_ephemerides()
+    if not df.empty:
+        print("\n📈 Generating Plots...")
+        plot_ephemerides()
 
-    ##print("\n📅 Latest Ephemerides Entry:")
-    ##print(get_latest_ephemerides())
+    print("\n📅 Latest Ephemerides Entry:")
+    print(get_latest_ephemerides())
 
 if __name__ == "__main__":
     main()

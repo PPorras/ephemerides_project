@@ -1,0 +1,6 @@
+Para crear un entorno virtual
+
+python -m venv nombre_entorno
+
+source nombre/bin/activate
+
